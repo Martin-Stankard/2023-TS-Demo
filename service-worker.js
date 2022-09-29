@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Martin-Stankard/2023-ts-demo/precache-manifest.9eb6539ae5cbfe395f5365ec9134df7f.js"
+  "/Martin-Stankard/2023-ts-demo/precache-manifest.ff8f7dfa4b65fdd3ec636bc411e166b8.js"
 );
 
 workbox.clientsClaim();
