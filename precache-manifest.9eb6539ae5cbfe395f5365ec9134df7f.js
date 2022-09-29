@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d2f49f5011c0db15a5e7",
-    "url": "/Martin-Stankard/2023-ts-demo/static/css/main.2cedc718.chunk.css"
+    "revision": "801959b6424ff1593784",
+    "url": "/Martin-Stankard/2023-ts-demo/static/css/main.30a7f112.chunk.css"
   },
   {
-    "revision": "d2f49f5011c0db15a5e7",
-    "url": "/Martin-Stankard/2023-ts-demo/static/js/main.d2f49f50.chunk.js"
+    "revision": "801959b6424ff1593784",
+    "url": "/Martin-Stankard/2023-ts-demo/static/js/main.801959b6.chunk.js"
   },
   {
     "revision": "03ae7ea834bbe7645a20",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/Martin-Stankard/2023-ts-demo/static/media/logo.06e73328.svg"
   },
   {
-    "revision": "8a66e2dd1f7d5b62576979f32d6599fa",
+    "revision": "1e9e870d65b01ff79452e349540886d4",
     "url": "/Martin-Stankard/2023-ts-demo/index.html"
   }
 ];
