@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Martin-Stankard/2023-ts-demo/precache-manifest.ff8f7dfa4b65fdd3ec636bc411e166b8.js"
+  "/2023-TS-Demo/precache-manifest.47537230cf0ecf117e43ceaa6e89b217.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Martin-Stankard/2023-ts-demo/index.html", {
+workbox.routing.registerNavigationRoute("/2023-TS-Demo/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
