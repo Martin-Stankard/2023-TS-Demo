@@ -1,3 +1,5 @@
+# 2023-TS-Demo
+Learning about Github Free Hosting whilst doing some Typescript design pattern exercises
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
