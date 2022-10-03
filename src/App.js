@@ -9,9 +9,7 @@ const PokemonRow = ({ pokemon, onSelect }) => (
     <td>{pokemon.name.english}</td>
     <td>{pokemon.type.join(", ")}</td>
     <td>
-      <button
-      onClick={()=> onSelect(pokemon)}
-      >SEL</button>
+      <button onClick={() => onSelect(pokemon)}>SEL</button>
     </td>
   </tr>
 );
@@ -19,14 +17,40 @@ const PokemonRow = ({ pokemon, onSelect }) => (
 PokemonRow.propTypes = {
   pokemon: PropTypes.shape({
     name: PropTypes.shape({
-      english: PropTypes.string,
+      english: PropTypes.string.isRequired,
     }),
     type: PropTypes.arrayOf(PropTypes.string),
   }),
-  onSelect: PropTypes.func,
+  onSelect: PropTypes.func.isRequired,
 };
 
+const PokemonInfo = ({ name, base }) => (
+  <div>
+    <h1>{name.english}</h1>
+    <table>
+      {Object.keys(base).map((key) => (
+        <tr key={key}>
+          <td>{key}</td>
+          <td>{base[key]}</td>
+        </tr>
+      ))}
+    </table>
+  </div>
+);
 
+PokemonInfo.propTypes = {
+  name: PropTypes.shape({
+    english: PropTypes.string.isRequired,
+  }),
+  base: PropTypes.shape({
+    HP: PropTypes.number.isRequired,
+    Attack: PropTypes.number.isRequired,
+    Defense: PropTypes.number.isRequired,
+    "Sp. Attack": PropTypes.number.isRequired,
+    "Sp. Defense": PropTypes.number.isRequired,
+    Speed: PropTypes.number.isRequired,
+  }),
+};
 
 function App() {
   const [filter, filterSet] = React.useState("");
@@ -69,16 +93,16 @@ function App() {
                 )
                 .slice(0, 20)
                 .map((pokemon) => (
-                  <PokemonRow pokemon={pokemon} key={pokemon.id} onSelect={(pokemon)=> selectedItemSet(pokemon)}/>
+                  <PokemonRow
+                    pokemon={pokemon}
+                    key={pokemon.id}
+                    onSelect={(pokemon) => selectedItemSet(pokemon)}
+                  />
                 ))}
             </tbody>
           </table>
         </div>
-        {selectedItem && (
-          <div> 
-            <h1>{selectedItem.name.english}</h1>
-          </div>
-        )}
+        {selectedItem && <PokemonInfo {...selectedItem} />}
       </div>
     </div>
   );
