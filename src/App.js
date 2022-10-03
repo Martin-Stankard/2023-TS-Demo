@@ -62,7 +62,7 @@ function App() {
   const [selectedPokemon, selectedPokemonSet] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("pokemon.json")
+    fetch("2023-TS-Demo/pokemon.json")
       .then((resp) => resp.json())
       .then((data) => pokemonSet(data));
   }, []);
