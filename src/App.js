@@ -62,6 +62,7 @@ function App() {
   const [selectedPokemon, selectedPokemonSet] = React.useState(null);
 
   React.useEffect(() => {
+    // So weird...besides seeming intermittent due to caching; this works local and deployed; not same as demo :|
     fetch("pokemon.json")
       .then((resp) => resp.json())
       .then((data) => pokemonSet(data));
