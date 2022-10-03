@@ -1,6 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
+import pokemon from "./pokemon.json";
 import React from "react";
+
+const PokemonRow = ({ pokemon }) => (
+  <tr>
+    <td>{pokemon.name.english}</td>
+    <td>{pokemon.type.join(", ")}</td>
+  </tr>
+);
 
 function App() {
   return (
@@ -20,10 +27,9 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Bulbasaur</td>
-            <td>Grass, Poison</td>
-          </tr>
+          {pokemon.slice(0, 20).map((pokemon) => (
+            <PokemonRow pokemon={pokemon} key={pokemon.id}></PokemonRow>
+          ))}
         </tbody>
       </table>
     </div>
