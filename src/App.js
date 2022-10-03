@@ -1,26 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Force a deconflict here form main. Some change to be seen!!!!!
-          Edit <code>src/App.js</code> and save to reload. Deployed from silly branch test
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        margin: "auto",
+        width: 800,
+        paddingTop: "1rem",
+      }}
+    >
+      <h1 className="title">Pokemon Search</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bulbasaur</td>
+            <td>Grass, Poison</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
